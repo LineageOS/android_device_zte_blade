@@ -313,10 +313,10 @@ static const str_map effects[] = {
     { CameraParameters::EFFECT_NEGATIVE,   CAMERA_EFFECT_NEGATIVE },
     { CameraParameters::EFFECT_SOLARIZE,   CAMERA_EFFECT_SOLARIZE },
     { CameraParameters::EFFECT_SEPIA,      CAMERA_EFFECT_SEPIA },
-    { CameraParameters::EFFECT_POSTERIZE,  CAMERA_EFFECT_POSTERIZE },
+//    { CameraParameters::EFFECT_POSTERIZE,  CAMERA_EFFECT_POSTERIZE },
     { CameraParameters::EFFECT_WHITEBOARD, CAMERA_EFFECT_WHITEBOARD },
     { CameraParameters::EFFECT_BLACKBOARD, CAMERA_EFFECT_BLACKBOARD },
-    { CameraParameters::EFFECT_AQUA,       CAMERA_EFFECT_AQUA }
+//    { CameraParameters::EFFECT_AQUA,       CAMERA_EFFECT_AQUA }
 };
 
 // from qcamera/common/camera.h
@@ -3978,7 +3978,8 @@ status_t QualcommCameraHardware::setContrast(const CameraParameters& params)
 
 status_t QualcommCameraHardware::setSaturation(const CameraParameters& params)
 {
-    if(!strcmp(sensorType->name, "2mp")) {
+    if(!strcmp(sensorType->name, "2mp") || !strcmp(mSensorInfo.name, "ov5642") // ov5642 on Blade is black and white if saturation is set.
+	|| !strcmp(mSensorInfo.name, "mt9t11x")) { // mt9t11x has bad colors if saturation is enabled.
         LOGE("Saturation not supported for this sensor");
         return NO_ERROR;
     }
