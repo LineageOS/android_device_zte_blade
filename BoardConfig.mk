@@ -33,7 +33,7 @@ TARGET_NO_BOOTLOADER := true
 
 TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/blade/recovery_kernel
 
-BOARD_KERNEL_CMDLINE := androidboot.hardware=blade console=ttyMSM2,115200  g_android.product_id=0x1354
+BOARD_KERNEL_CMDLINE := androidboot.hardware=blade console=ttyMSM2,115200  g_android.product_id=0x1354 g_android.serial_number=Blade-CM7
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_ARCH_VARIANT := armv6-vfp
@@ -80,6 +80,9 @@ BOARD_KERNEL_BASE := 0x02a00000
 
 TARGET_PROVIDES_LIBRIL := true
 TARGET_PROVIDES_LIBAUDIO := true
+
+BOARD_USE_USB_MASS_STORAGE_SWITCH := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
