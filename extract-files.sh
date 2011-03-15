@@ -25,6 +25,8 @@ adb pull /system/bin/akmd2 ../../../vendor/zte/$DEVICE/proprietary/akmd2
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/akmd2
 adb pull /system/bin/hci_qcomm_init ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
+adb pull /system/bin/proximity.init ../../../vendor/zte/$DEVICE/proprietary/proximity.init
+chmod 755 ../../../vendor/zte/$DEVICE/proprietary/proximity.init
 
 adb pull /system/etc/init.qcom.bt.sh ../../../vendor/zte/$DEVICE/proprietary/init.qcom.bt.sh
 
@@ -136,6 +138,7 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
     vendor/zte/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
     vendor/zte/__DEVICE__/proprietary/akmd2:system/bin/akmd2 \\
+    vendor/zte/__DEVICE__/proprietary/proximity.init:system/bin/proximity.init \\
     vendor/zte/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\
@@ -187,8 +190,6 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/libomx_m4vdec_sharedlibrary.so:system/lib/libomx_m4vdec_sharedlibrary.so \\
     vendor/zte/__DEVICE__/proprietary/libomx_mp3dec_sharedlibrary.so:system/lib/libomx_mp3dec_sharedlibrary.so \\
     vendor/zte/__DEVICE__/proprietary/libomx_sharedlibrary.so:system/lib/libomx_sharedlibrary.so
-
-
 
 EOF
 

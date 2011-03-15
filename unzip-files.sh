@@ -21,9 +21,8 @@ unzip -j -o ../../../${DEVICE}_update.zip system/bin/qmuxd -d ../../../vendor/zt
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/qmuxd
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 -d ../../../vendor/zte/$DEVICE/proprietary/
 chmod 755 ../../../vendor/zte/$DEVICE/proprietary/akmd2
-unzip -j -o ../../../${DEVICE}_update.zip system/bin/hci_qcomm_init -d ../../../vendor/zte/$DEVICE/proprietary/
-chmod 755 ../../../vendor/zte/$DEVICE/proprietary/hci_qcomm_init
-
+unzip -j -o ../../../${DEVICE}_update.zip system/bin/proximity.init -d ../../../vendor/zte/$DEVICE/proprietary/proximity.init
+chmod 755 ../../../vendor/zte/$DEVICE/proprietary/proximity.init
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/init.qcom.bt.sh -d ../../../vendor/zte/$DEVICE/proprietary/
 
 #Wifi
@@ -134,6 +133,7 @@ PRODUCT_COPY_FILES += \\
     vendor/zte/__DEVICE__/proprietary/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw \\
     vendor/zte/__DEVICE__/proprietary/qmuxd:system/bin/qmuxd \\
     vendor/zte/__DEVICE__/proprietary/akmd2:system/bin/akmd2 \\
+    vendor/zte/__DEVICE__/proprietary/proximity.init:system/bin/proximity.init \\
     vendor/zte/__DEVICE__/proprietary/libril-qc-1.so:system/lib/libril-qc-1.so \\
     vendor/zte/__DEVICE__/proprietary/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
     vendor/zte/__DEVICE__/proprietary/libdiag.so:system/lib/libdiag.so \\

@@ -155,3 +155,12 @@ service hostapd /system/bin/hostapd /data/misc/wifi/hostapd.conf
     group wifi inet
     oneshot
     disabled
+
+#ZTE_WANGZY_PROXIMITY_001
+service proximity_init /system/bin/proximity.init -r
+    disabled
+    oneshot
+    
+on property:dev.bootdone=1
+    start proximity_init
+#ZTE_WANGZY_PROXIMITY_001
