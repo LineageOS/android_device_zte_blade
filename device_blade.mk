@@ -76,7 +76,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zte/blade/init.bt.sh:system/etc/init.bt.sh \
     device/zte/blade/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/zte/blade/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf
+    device/zte/blade/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/zte/blade/prebuilt/hostapd:system/bin/hostapd
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
