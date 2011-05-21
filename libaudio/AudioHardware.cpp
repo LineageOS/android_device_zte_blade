@@ -1121,9 +1121,15 @@ status_t AudioHardware::doAudioRouteOrMute(uint32_t device)
         }
     }
 #endif
-    LOGV("doAudioRouteOrMute() device %x, mMode %d, mMicMute %d", device, mMode, mMicMute);
-    return do_route_audio_rpc(device,
-                              mMode != AudioSystem::MODE_IN_CALL && device != SND_DEVICE_HANDSET, mMicMute, m7xsnddriverfd);
+    /* QCOM caveat: Audio will be routed to speaker if device=handset and mute=true */
+    /* Also, the audio circuit causes battery drain unless mute=true */
+    /* Android < 2.0 uses MODE_IN_CALL for routing audio to earpiece */
+    /* Android >= 2.0 advises to use STREAM_VOICE_CALL streams and setSpeakerphoneOn() */
+    /* Android >= 2.3 uses MODE_IN_COMMUNICATION for SIP calls */
+    bool mute = !isInCall(); /* fixme: does not work for apps using STREAM_VOICE_CALL */
+    LOGD("doAudioRouteOrMute() device %x, mMode %d, mMicMute %d, %s",
+        device, mMode, mMicMute, mute ? "muted" : "audio circuit active");
+    return do_route_audio_rpc(device, mute, mMicMute, m7xsnddriverfd);
 }
 
 status_t AudioHardware::doRouting(AudioStreamInMSM72xx *input)
