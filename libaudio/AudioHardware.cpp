@@ -91,7 +91,8 @@ static uint32_t SND_DEVICE_NO_MIC_HEADSET=-1;
 
 AudioHardware::AudioHardware() :
     mInit(false), mMicMute(true), mBluetoothNrec(true), mBluetoothId(0),
-    mOutput(0), mSndEndpoints(NULL), mCurSndDevice(-1), mDualMicEnabled(false), mBuiltinMicSelected(false)
+    mOutput(0), mSndEndpoints(NULL), mCurSndDevice(-1), mDualMicEnabled(false), mBuiltinMicSelected(false),
+    mFmRadioEnabled(false)
 {
    if (get_audpp_filter() == 0) {
            audpp_filter_inited = true;
@@ -168,6 +169,8 @@ AudioHardware::AudioHardware() :
         ioctl(m7xsnddriverfd, SND_AGC_CTL, &AUTO_VOLUME_ENABLED);
     }
 	else LOGE("Could not open MSM SND driver.");
+    
+    fmfd = open("/dev/si4708", O_RDWR);
 }
 
 AudioHardware::~AudioHardware()
@@ -369,6 +372,16 @@ status_t AudioHardware::setParameters(const String8& keyValuePairs)
                  "(%s not in acoustic database)", value.string());
             doRouting(NULL);
         }
+    }
+
+    key = String8(AudioParameter::keyFmOn);
+    int devices;
+    if (param.getInt(key, devices) == NO_ERROR) {
+       setFmOnOff(true);
+    }
+    key = String8(AudioParameter::keyFmOff);
+    if (param.getInt(key, devices) == NO_ERROR) {
+       setFmOnOff(false);
     }
 
     key = String8(DUALMIC_KEY);
@@ -1064,6 +1077,19 @@ status_t AudioHardware::setMasterVolume(float v)
     return -1;
 }
 
+status_t AudioHardware::setFmOnOff(int onoff)
+{
+    int ret;
+
+    if (onoff) {
+        mFmRadioEnabled = true;
+    } else {
+        mFmRadioEnabled = false;
+    }
+    LOGI("mFmRadioEnabled=%d", mFmRadioEnabled);
+    return doRouting(NULL);
+}
+
 static status_t do_route_audio_rpc(uint32_t device,
                                    bool ear_mute, bool mic_mute, int m7xsnddriverfd)
 {
@@ -1131,6 +1157,10 @@ status_t AudioHardware::doAudioRouteOrMute(uint32_t device)
         /* workaround to emulate Android >= 2.0 behaviour */
         /* enable routing to earpiece (unmute) if mic is selected as input */
         mute = !mBuiltinMicSelected;
+    }
+    if(mFmRadioEnabled && (device == SND_DEVICE_HEADSET)) {
+      mute = 0;
+      LOGI("unmute for radio");
     }
     LOGD("doAudioRouteOrMute() device %x, mMode %d, mMicMute %d, mBuiltinMicSelected %d, %s",
         device, mMode, mMicMute, mBuiltinMicSelected, mute ? "muted" : "audio circuit active");
@@ -2008,6 +2038,22 @@ status_t AudioHardware::AudioStreamInMSM72xx::setParameters(const String8& keyVa
     }
     return status;
 }
+
+#ifdef HAVE_FM_RADIO
+#define Si4708_IOC_MAGIC  'k'
+#define Si4708_IOC_SET_VOL                    _IOW(Si4708_IOC_MAGIC, 8,int)
+
+status_t AudioHardware::setFmVolume(float v)
+{
+    int volume = AudioSystem::logToLinear(v) * 15 / 100;
+
+    if (ioctl(fmfd, Si4708_IOC_SET_VOL, &volume) < 0) {
+        LOGE("set_volume_fm error.");
+        return -EIO;
+    }
+    return NO_ERROR;
+}
+#endif
 
 String8 AudioHardware::AudioStreamInMSM72xx::getParameters(const String8& keys)
 {
