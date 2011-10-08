@@ -58,9 +58,6 @@ adb pull /system/lib/libpbmlib.so ../../../vendor/zte/$DEVICE/proprietary/libpbm
 adb pull /system/lib/libdss.so ../../../vendor/zte/$DEVICE/proprietary/libdss.so
 adb pull /system/lib/libauth.so ../../../vendor/zte/$DEVICE/proprietary/libauth.so
 
-#lights
-adb pull /system/lib/hw/lights.msm7k.so ../../../vendor/zte/$DEVICE/proprietary/lights.msm7k.so
-
 #camera
 adb pull /system/lib/liboemcamera.so ../../../vendor/zte/$DEVICE/proprietary/liboemcamera.so
 adb pull /system/lib/libmmjpeg.so ../../../vendor/zte/$DEVICE/proprietary/libmmjpeg.so
