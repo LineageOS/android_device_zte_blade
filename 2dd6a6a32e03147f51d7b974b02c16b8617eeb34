@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAJn///yI\u003d",
+        "filename": "liblights/lights.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2011-10-08T15:53:10Z",
+      "side": 1,
+      "message": "semc? not blade?",
+      "revId": "2dd6a6a32e03147f51d7b974b02c16b8617eeb34",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
