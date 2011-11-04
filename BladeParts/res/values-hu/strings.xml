@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ZTE Blade beállítások</string>
+    <string name="prox_calibration_title_head">Proximity szenzor kalibráció</string>
+    <string name="prox_calibration_summary_head">Érintse meg a kalibráció elvégzéséhez</string>
+    <string name="prox_display_title_head">Proximity szenzor adatok</string>
+    <string name="prox_display_summary_head">Aktuális proximity szenzor kalibrációs adatok</string>
+    <string name="toast_error">Hiba:</string>
+    <string name="back_button">Vissza</string>
+    <string name="usb_charging_title_head">USB töltés</string>
+    <string name="usb_charging_summary_head">USB töltés engedélyezése/tiltása</string>
+</resources>
