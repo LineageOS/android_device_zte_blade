@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAK3///MM\u003d",
+        "filename": "BladeParts/res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2011-11-05T00:17:51Z",
+      "side": 1,
+      "message": "I\u0027m wondering if \"Közelségérzékel?\" or \"Proximity szenzor\" has more meaning for an average user.",
+      "revId": "90e106f5bdb9647f0d03e4959c48eb0206985a35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAK3///MQ\u003d",
+        "filename": "BladeParts/res/values-hu/strings.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1573
+      },
+      "writtenOn": "2011-11-05T00:17:51Z",
+      "side": 1,
+      "message": "\"USB töltés engedélyezése/tiltása\" would be better here.",
+      "revId": "90e106f5bdb9647f0d03e4959c48eb0206985a35",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
