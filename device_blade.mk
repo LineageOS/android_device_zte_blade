@@ -110,7 +110,8 @@ PRODUCT_COPY_FILES += \
     device/zte/blade/firmware/regcode:system/wifi/regcode \
     device/zte/blade/firmware/data.patch.hw2_0.bin:system/wifi/data.patch.hw2_0.bin \
     device/zte/blade/firmware/athwlan.bin.z77:system/wifi/athwlan.bin.z77 \
-    device/zte/blade/firmware/athtcmd_ram.bin:system/wifi/athtcmd_ram.bin
+    device/zte/blade/firmware/athtcmd_ram.bin:system/wifi/athtcmd_ram.bin \
+    device/zte/blade/firmware/calData_ar6102_15dBm.bin:system/wifi/calData_ar6102_15dBm.bin
 
 #Media profile
 PRODUCT_COPY_FILES += \
