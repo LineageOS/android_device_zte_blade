@@ -33,8 +33,8 @@ LOCAL_SRC_FILES := 						\
 				nusensors.cpp 			\
 				InputEventReader.cpp		\
 				SensorBase.cpp			\
-				TaosProximity.cpp		\
-				TaosLight.cpp			\
+				BladeProximity.cpp		\
+				BladeLight.cpp			\
 				AkmSensor.cpp
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils
@@ -44,10 +44,12 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
+LOCAL_CFLAGS := -DLOG_TAG=\"ProxCal\"
 LOCAL_SRC_FILES:= proxcal/prox_cal.c
 
 LOCAL_MODULE:= prox_cal
 LOCAL_MODULE_TAGS := optional
+LOCAL_SHARED_LIBRARIES := liblog
 
 include $(BUILD_EXECUTABLE)
 
