@@ -112,6 +112,10 @@ PRODUCT_COPY_FILES += \
          frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
          packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# Get full apns-conf.xml instead of the development sample
+PRODUCT_COPY_FILES += \
+        vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
