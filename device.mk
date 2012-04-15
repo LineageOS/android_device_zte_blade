@@ -19,12 +19,6 @@
 #
 # Everything in this directory will become public
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-        LOCAL_KERNEL := device/zte/blade/kernel
-else
-        LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
 DEVICE_PACKAGE_OVERLAYS := device/zte/blade/overlay
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
@@ -57,7 +51,6 @@ PRODUCT_PACKAGES += \
 DISABLE_DEXPREOPT := false
 
 PRODUCT_COPY_FILES := \
-        $(LOCAL_KERNEL):kernel \
         device/zte/blade/init.blade.rc:root/init.blade.rc \
         device/zte/blade/init.blade.usb.rc:root/init.blade.usb.rc \
         device/zte/blade/ueventd.blade.rc:root/ueventd.blade.rc \
