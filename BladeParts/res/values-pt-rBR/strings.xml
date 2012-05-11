@@ -1,17 +1,17 @@
-Ôªø<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">Configura√ß√µes ZTE Blade</string>
-  <string name="prox_calibration_title_head">Calibra√ß√£o do sensor de proximidade</string>
-  <string name="prox_calibration_summary_head">N√£o ponha nada perto do topo da tela enquanto esteja rodando</string>
+  <string name="app_name">ConfiguraÁıes ZTE Blade</string>
+  <string name="prox_calibration_title_head">CalibraÁ„o do sensor de proximidade</string>
+  <string name="prox_calibration_summary_head">N„o ponha nada perto do topo da tela enquanto esteja rodando</string>
   <string name="prox_display_title_head">Exibir os dados do sensor de proximidade</string>
-  <string name="prox_display_summary_head">Mostrar dados atuais de calibra√ß√£o do sensor de proximidade</string>
+  <string name="prox_display_summary_head">Mostrar dados atuais de calibraÁ„o do sensor de proximidade</string>
   <string name="toast_error">Erro:</string>
   <string name="back_button">Voltar</string>
-  <string name="prox_restore_title_head">Restaurar padr√£o de proximidade</string>
-  <string name="prox_restore_summary_head">Remove os dados de calibra√ß√£o (Requer reinicializa√ß√£o).</string>
-  <string name="delete_success">Padr√£o foi restaurado com sucesso. Por favor, reinicie o aparelho.</string>
-  <string name="delete_error">Falhou ao restaurar os padr√µes.</string>
-  <string name="delete_no_file">J√° est√° usando os padr√µes</string>
+  <string name="prox_restore_title_head">Restaurar padr„o de proximidade</string>
+  <string name="prox_restore_summary_head">Remove os dados de calibraÁ„o (Requer reinicializaÁ„o).</string>
+  <string name="delete_success">Padr„o foi restaurado com sucesso. Por favor, reinicie o aparelho.</string>
+  <string name="delete_error">Falhou ao restaurar os padrıes.</string>
+  <string name="delete_no_file">J· est· usando os padrıes</string>
   <string name="usb_charging_title_head">Carregando via USB</string>
   <string name="usb_charging_summary_head">Ativar/Desativar o carregamento</string>
 </resources>
