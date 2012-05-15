@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAS3//9/s\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 223,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "This fails on blade. That is why it is disabled.",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/o\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "7227 \u003d 7627",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/k\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 325,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "These were also disabled because they didn\u0027t work.",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/M\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 774,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "Why would these not be errors?",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/Q\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 792,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "Why would these not be errors?",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/Y\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1034,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/U\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1062,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "white space",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/c\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1262,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "Why?",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAS3//9/g\u003d",
+        "filename": "libcamera/QualcommCameraHardware.cpp",
+        "patchSetId": 1
+      },
+      "lineNbr": 1270,
+      "author": {
+        "id": 320
+      },
+      "writtenOn": "2012-05-15T15:39:42Z",
+      "side": 1,
+      "message": "Why?",
+      "revId": "95810d23fb581428adee9bcff23af89d1be9ab2d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71",
+      "unresolved": false
+    }
+  ]
+}
