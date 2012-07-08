@@ -84,6 +84,8 @@ BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
 TARGET_FORCE_CPU_UPLOAD := true
 
+ENABLE_WEBGL := true
+
 # dev:    size   erasesize  name
 # mtd0: 00500000 00020000 "recovery"
 # mtd1: 00500000 00020000 "boot"
